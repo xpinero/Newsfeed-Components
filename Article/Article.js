@@ -98,7 +98,7 @@ const data = [
 
     <span class='expandButton'></span>
   </div>
-
+  
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
@@ -112,3 +112,43 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+function newArticle(titleText, dateContent, pOne, pTwo, pThree) {
+  const article = document.createElement('div');
+article.classList.add('article');
+
+const title = document.createElement('h3');
+title.textContent = titleText;   /// titleText is an argument
+
+const date = document.createElement('p');
+date.classList.add('date');
+date.textContent = dateContent;    // dateContent is an argument
+
+const parOne = document.createElement('p');
+parOne.textContent = pOne;
+
+const parTwo = document.createElement('p');
+parTwo.textContent = pTwo;
+
+const parThree = document.createElement('p');
+parThree.textContent = pThree;
+
+
+const button = document.createElement('span');
+button.classList.add('expandButton');
+button.addEventListener('click', (e) => {
+  article.classList.toggle(article-open)
+  console.log("see if it works")
+})
+
+const articles = document.querySelector('.articles')
+
+articles.appendChild(article);
+article.appendChild(title);
+article.appendChild(date);
+article.appendChild(parOne);
+article.appendChild(parTwo);
+article.appendChild(parThree);
+article.appendChild(button);
+
+return newArticle;
+}
